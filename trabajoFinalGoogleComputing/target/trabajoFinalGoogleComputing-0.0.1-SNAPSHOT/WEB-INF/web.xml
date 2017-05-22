@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <servlet>
+    <servlet-name>AltaEmpresa</servlet-name>
+    <servlet-class>trabajoFinalGoogleComputing.AltaEmpresaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AltaEmpresa</servlet-name>
+    <url-pattern>/AltaEmpresa</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AltaCliente</servlet-name>
+    <servlet-class>trabajoFinalGoogleComputing.AltaClienteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AltaCliente</servlet-name>
+    <url-pattern>/AltaCliente</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AltaEmpleado</servlet-name>
+    <servlet-class>trabajoFinalGoogleComputing.AltaEmpleadoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AltaEmpleado</servlet-name>
+    <url-pattern>/AltaEmpleado</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+    <filter-name>ObjectifyFilter</filter-name>
+    <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ObjectifyFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <listener>
+    <listener-class>trabajoFinalGoogleComputing.MyServletContextListener</listener-class>
+  </listener>
+  <servlet>
+    <description></description>
+    <display-name>MiAutentica</display-name>
+    <servlet-name>MiAutentica</servlet-name>
+    <servlet-class>trabajoFinalGoogleComputing.MiAutenticaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MiAutentica</servlet-name>
+    <url-pattern>/MiAutentica</url-pattern>
+  </servlet-mapping>
+  
+
+  <servlet-mapping>
+    <servlet-name>MiAutentica</servlet-name>
+    <url-pattern>/MiAutentica</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>HomeRegistro.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  
+</web-app>
